@@ -8,7 +8,7 @@ else
     else
         if [ -n "${BASH_EXECUTION_STRING:-}" ]; then
             echo 'bash -c $(cat a.sh)"'
-        elif [ -p /dev/stdin ]
+        elif [ -p /dev/stdin ]; then
             echo 'cat a.sh | bash'
         else
             echo "??"
